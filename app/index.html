@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+	<div class="aside">
+		<div class="sidebar-wrapper">
+			<ul class="nav-project">
+				<li class="project-item">
+					<a href="#" class="project-link active">
+						<img src="img/images.png" alt="project-icon" class="project-icon">
+					</a>
+				</li>
+				<li class="project-item">
+					<a href="#" class="project-link">
+						<img src="img/images.png" alt="project-icon" class="project-icon">
+					</a>
+				</li>
+				<li class="project-item">
+					<a href="#" class="project-link">
+						<img src="img/images.png" alt="project-icon" class="project-icon">
+					</a>
+				</li>
+				<li class="project-item">
+					<a href="#" class="project-link">
+						<img src="img/images.png" alt="project-icon" class="project-icon">
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="sub-sidebar-wrapper">
+			<div class="sidebar-header">
+				<div class="sidebar-logo">
+					<span class="logo-text">Hubstaff</span>
+				</div>
+			</div>
+			<div class="sidebar-content">
+				<h3 class="sidebar-section-title">Metrics</h3>
+				<ul class="sidebar-nav">
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-tachometer-alt"></i>
+							<span class="link-text">Dashboard</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-chart-line"></i>
+							<span class="link-text">Activity</span>
+						</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-clock"></i>
+							<span class="link-text">Timesheets</span>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#" class="dropdown-menu-link active">Work Log</a>
+							</li>
+							<li>
+								<a href="#" class="dropdown-menu-link">Calendar timesheet</a>
+							</li>
+							<li>
+								<a href="#" class="dropdown-menu-link"> Weekly timesheet</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-clipboard"></i>
+							<span class="link-text">Reports</span>
+						</a>
+					</li>
+				</ul>
+
+				<h3 class="sidebar-section-title">Configure</h3>
+				<ul class="sidebar-nav">
+					<li class="nav-item">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-briefcase"></i>
+							<span class="link-text">Organizations</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-user-plus"></i>
+							<span class="link-text">Add Member</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-item-link">
+							<i class="fas fa-folder"></i>
+							<span class="link-text">Add Project</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="sidebar-footer">
+				<div class="user-info">
+					<div class="avatar-block">
+						<img src="img/avatar.jpg" alt="avatar" class="avatar-img">
+					</div>
+					<span class="username-block">
+						Adrian Goia
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-content">
+		<div class="content-wrapper">
+			<div class="filters-row">
+				<div class="date-filters">
+					<div class="date-filter-input">
+						<label for="date" class="filters-label">Date range</label>
+						<div class="date-input-icon">
+							<input id="date" class="form-control date-input" type="text" value="Thu, Jun 30 2016 - Fri, Jul 1 2016">
+						</div>
+					</div>
+					<div class="without-label">
+						<a href="#" class="btn btn-default">Today</a>
+					</div>
+				</div>
+				<div class="user-filters">
+					<div class="user-filter-select">
+						<label for="users" class="filters-label">User</label>
+						<div class="select-arrow-icon">
+							<select id="users" class="form-control select">
+								<option>Adrian Goia</option>
+								<option>Tratata</option>
+							</select>
+						</div>
+					</div>
+					<div class="user-filter-select">
+						<label for="users" class="filters-label">Timezone</label>
+						<div class="select-arrow-icon">
+							<select id="users" class="form-control select">
+								<option>Mine (GMT -5:00)</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btn-row">
+				<a href="#" class="btn btn-primary btn-lg">Add time</a>
+				<a href="#" class="btn margin-left-10 dropdown btn-lg">Export</a>
+			</div>
+
+			<div class="table-wrapper">
+				<div class="datetime-wrapper">
+					<span class="date">Today</span>
+					<span class="time">08:45 hrs</span>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Project</th>
+							<th></th>
+							<th>Manual
+								<i class="fas fa-info-circle"></i>
+							</th>
+							<th>Duration</th>
+							<th>Time span</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div class="project-cell-wrapper">
+									<div class="project-logo">
+										<div class="avatar-initial" style="background-color: #28d582">H</div>
+									</div>
+									<div class="project-info">
+										<div class="project-title">Hubstaff Server</div>
+										<div class="project-desc">Netsoft holding, llc</div>
+									</div>
+								</div>
+							</td>
+							<td>This is an example of a note</td>
+							<td>0%</td>
+							<td>01:36:01</td>
+							<td>8:06 am - 12:04 pm</td>
+							<td>
+								<a href="#" class="btn btn-action btn-action-edit">
+									<i class="fas fa-edit"></i>
+								</a>
+								<a href="#" class="btn btn-action btn-action-delete">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="project-cell-wrapper">
+									<div class="project-logo">
+										<div class="avatar-initial" style="background-color: #7d68ff">C</div>
+									</div>
+									<div class="project-info">
+										<div class="project-title">Cluball</div>
+										<div class="project-desc">epic coders</div>
+									</div>
+								</div>
+							</td>
+							<td>This is an example of a note</td>
+							<td>0%</td>
+							<td>01:36:01</td>
+							<td>8:06 am - 12:04 pm</td>
+							<td>
+								<a href="#" class="btn btn-action btn-action-edit">
+									<i class="fas fa-edit"></i>
+								</a>
+								<a href="#" class="btn btn-action btn-action-delete">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="project-cell-wrapper">
+									<div class="project-logo">
+										<div class="avatar-initial" style="background-color: #ffbe32">A</div>
+									</div>
+									<div class="project-info">
+										<div class="project-title">Axon</div>
+										<div class="project-desc">epic coders</div>
+									</div>
+								</div>
+							</td>
+							<td>This is an example of a note</td>
+							<td>0%</td>
+							<td>01:36:01</td>
+							<td>8:06 am - 12:04 pm</td>
+							<td>
+								<a href="#" class="btn btn-action btn-action-edit">
+									<i class="fas fa-edit"></i>
+								</a>
+								<a href="#" class="btn btn-action btn-action-delete">
+									<i class="fas fa-trash-alt"></i>
+								</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="table-wrapper">
+					<div class="datetime-wrapper">
+						<span class="date">Tue, Jun 24, 2016</span>
+						<span class="time">6:22 hrs</span>
+					</div>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Project</th>
+								<th></th>
+								<th>Manual
+									<i class="fas fa-info-circle"></i>
+								</th>
+								<th>Duration</th>
+								<th>Time span</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="project-cell-wrapper">
+										<div class="project-logo">
+											<div class="avatar-initial" style="background-color: #ff80b9">H</div>
+										</div>
+										<div class="project-info">
+											<div class="project-title">Nucleo</div>
+											<div class="project-desc">epic coders</div>
+										</div>
+									</div>
+								</td>
+								<td>This is an example of a note</td>
+								<td>0%</td>
+								<td>01:36:01</td>
+								<td>8:06 am - 12:04 pm</td>
+								<td>
+									<a href="#" class="btn btn-action btn-action-edit">
+										<i class="fas fa-edit"></i>
+									</a>
+									<a href="#" class="btn btn-action btn-action-delete">
+										<i class="fas fa-trash-alt"></i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+</body>
+
+</html>
