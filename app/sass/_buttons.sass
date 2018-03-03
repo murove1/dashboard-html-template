@@ -1,0 +1,54 @@
+@import "vars"
+
+.btn
+  display: inline-block
+  text-decoration: none
+  border: 1px solid #d6dbe6
+  border-radius: 3px
+  cursor: pointer
+  color: #000
+  text-align: center
+  padding: 8px 11px
+
+  &.btn-default
+    font-weight: 700
+    &:hover
+      border-color: #c0c5cF
+
+  &.btn-primary
+    background: $cyan
+    color: #fff
+    border: none
+    font-size: 14px
+
+  &.btn-lg
+    width: 120px
+
+  &.btn-action
+    font-size: 18px
+    border: none
+
+  &.btn-action-edit
+    color: $cyan
+
+  &.btn-action-delete
+    color: #ff7676
+
+  &.dropdown
+    position: relative
+    font-size: 14px
+    border-color: $cyan
+    color: $cyan
+    &:after
+      content: "\f107"
+      @include centerer-y
+      right: 19px
+      font-family: 'Font Awesome\ 5 Free'
+      font-size: 18px
+      font-weight: 700
+      color: $cyan
+    &:hover
+      background: $cyan
+      color: #fff
+      &:after
+        color: #fff

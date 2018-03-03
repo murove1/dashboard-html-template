@@ -1,387 +1,322 @@
-@import "fonts"
-@import "libs"
 @import "vars"
-@import "_mixins/_mixins"
+@import "_mixins/mixins"
+@import "helpers"
+@import "buttons"
 
 *
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    box-sizing: border-box
 
 html, body
-	height: 100%
-	margin: 0
+  height: 100%
+  margin: 0
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
-
-.margin-left-10
-	margin-left: 10px
-
-.btn
-	display: inline-block
-	text-decoration: none
-	border: 1px solid #d6dbe6
-	border-radius: 3px
-	cursor: pointer
-	color: #000
-	text-align: center
-	padding: 8px 11px
-
-	&.btn-default
-		font-weight: 700
-
-		&:hover
-			border-color: #c0c5cF
-
-	&.btn-primary
-		background: $cyan
-		color: #fff
-		border: 0
-		font-size: 14px
-
-	&.btn-lg
-		width: 120px
-
-	&.btn-action
-		font-size: 18px
-		border: none
-
-	&.btn-action-edit
-		color: $cyan
-
-	&.btn-action-delete
-		color: #ff7676
-	
-	&.dropdown
-		position: relative
-		font-size: 14px
-		border-color: $cyan
-		color: $cyan
-
-		&::after
-			content: "\f107"
-			@include centerer-y
-			right: 19px
-			font-family: 'Font Awesome\ 5 Free'
-			font-size: 18px
-			font-weight: 700
-			color: $cyan
-		
-		&:hover
-			background: $cyan
-			color: #fff
-
-			&::after
-				color: #fff
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  font-family: $default-font
+  overflow-x: hidden
 
 .without-label
-	display: inline-block
-	margin-top: 26px
+  display: inline-block
+  margin-top: 26px
 
-.aside
-	display: flex
-	position: fixed
-	top: 0
-	bottom: 0
-	width: 270px
+aside
+  display: flex
+  position: fixed
+  top: 0
+  bottom: 0
+  width: 270px
 
 // Sidebar-wrapper
 .sidebar-wrapper
-	background: $dark-blue
-	height: 100%
-	padding-top: 30px
+  background: $sidebar-bgc
+  height: 100%
+  padding-top: 30px
 
 .nav-project
-	margin: 0
-	padding: 0
-	font-size: 0
-	list-style: none
+  margin: 0
+  padding: 0
+  font-size: 0
+  list-style: none
 
 .project-link
-	display: block
-	text-decoration: none
-	color: transparent
-	padding: 0 9px 0 7px
-	margin-bottom: 20px
-	border-color: transparent
-	border-left: 2px solid
-	
-	&.active
-		border-color: $cyan
+  display: block
+  text-decoration: none
+  color: transparent
+  padding: 0 9px 0 7px
+  margin-bottom: 20px
+  border-color: transparent
+  border-left: 2px solid
+
+  &.active
+    border-color: $cyan
 
 .project-icon
-	width: 32px
-	height: 32px
-	border-radius: 2px
+  width: 32px
+  height: 32px
+  border-radius: 2px
 
 // Sub-sidebar-wrapper
 .sub-sidebar-wrapper
-	display: flex
-	flex-direction: column
-	background: $blue
-	height: 100%
-	width: 100%
+  display: flex
+  flex-direction: column
+  background: $sub-sidebar-bgc
+  height: 100%
+  width: 100%
 
 .sidebar-logo
-	text-align: center
+  text-align: center
 
 .logo-text
-	color: #fff
-	font-size: 24px
-	font-weight: 700
+  color: #fff
+  font-size: 24px
+  font-weight: 700
 
 .sidebar-header
-	padding: 30px 0 42px 0
+  padding: 30px 0 42px 0
 
 .sidebar-content
-	overflow-y: auto	
+  overflow-y: auto
 
 .sidebar-section-title
-	color: #485a84
-	font-size: 13px
-	text-transform: uppercase
-	padding: 30px 0 0 30px
-	margin: 0
+  color: #485a84
+  font-size: 13px
+  text-transform: uppercase
+  padding: 30px 0 0 30px
+  margin: 0
 
 .sidebar-nav
-	margin: 0
-	padding: 0
-	list-style: none
+  margin: 0
+  padding: 0
+  list-style: none
 
 .nav-item
-	margin-bottom: 10px
-	
-	&.dropdown > .nav-item-link
-			&::after
-				content: "\f104"
-				@include centerer-y
-				right: 33px
-				font-family: 'Font Awesome\ 5 Free'
-				font-size: 16px
-				font-weight: 900
-	
-	&.open > .nav-item-link
-			color: $cyan
-			background: #172850
+  margin-bottom: 10px
 
-			&::after
-				content: "\f107"
-	
-	&.open > .dropdown-menu
-			display: block
+  &.dropdown > .nav-item-link
+    &:after
+      content: "\f104"
+      @include centerer-y
+      right: 33px
+      font-family: 'Font Awesome\ 5 Free'
+      font-size: 16px
+      font-weight: 900
+
+  &.open > .nav-item-link
+    color: $cyan
+    background: #172850
+    &:after
+      content: "\f107"
+
+  &.open > .dropdown-menu
+    display: block
 
 .nav-item-link
-	display: block
-	color: #fff
-	text-decoration: none
-	padding: 6px 0 6px 29px
-	position: relative
+  display: block
+  color: #fff
+  text-decoration: none
+  padding: 6px 0 6px 29px
+  position: relative
+  &:hover
+    color: $cyan
 
-	i.fas
-		width: 20px
-		font-size: 18px
-		margin-right: 10px
-		text-align: center
-	
-	&:hover
-		color: $cyan
+  i.fas
+    width: 20px
+    font-size: 18px
+    margin-right: 10px
+    text-align: center
 
 .dropdown-menu
-	display: none
-	margin: 0
-	padding: 0
-	list-style: none
-	background: #172850
+  display: none
+  margin: 0
+  padding: 0
+  list-style: none
+  background: #172850
 
 .dropdown-menu-link
-	display: block
-	font-size: 14px
-	color: #fff
-	text-decoration: none
-	padding: 6px 0 6px 63px
+  display: block
+  font-size: 14px
+  color: #fff
+  text-decoration: none
+  padding: 6px 0 6px 63px
+  &:hover
+    color: $cyan
 
-	&.active
-		background: $cyan
-		&:hover
-			color: #fff
-
-	&:hover
-		color: $cyan
+  &.active
+    background: $cyan
+    &:hover
+      color: #fff
 
 .sidebar-footer
-	margin-top: auto
+  margin-top: auto
 
 .user-info
-	display: flex
-	align-items: center
-	padding: 0 0 30px 30px
-	
+  display: flex
+  align-items: center
+  padding: 0 0 30px 30px
+
 .avatar-block
-	width: 32px
-	height: 32px
-	margin-right: 9px
-	
+  width: 32px
+  height: 32px
+  margin-right: 9px
+
 .avatar-img
-	display: block
-	max-width: 100%
-	height: auto
-	border-radius: 50%
+  display: block
+  max-width: 100%
+  height: auto
+  border-radius: 50%
 
 .username-block
-	color: #fff
+  color: #fff
 
 // Main-content
 .main-content
-	margin-left: 270px
+  margin-left: 270px
 
 .content-wrapper
-	padding: 30px 30px 0
+  padding: 30px 30px 0
 
 .filters-row
-	display: flex
-	justify-content: space-between
-	margin-bottom: 30px
+  display: flex
+  justify-content: space-between
+  margin-bottom: 30px
 
 .date-filters
-	display: flex
+  display: flex
 
 .date-filter-input
-	width: 285px
-	margin-right: 12px
+  width: 285px
+  margin-right: 12px
 
 .filters-label
-	display: block
-	font-size: 13px
-	text-transform: uppercase
-	color: #7a8798
-	margin-bottom: 5px
+  display: block
+  font-size: 13px
+  text-transform: uppercase
+  color: #7a8798
+  margin-bottom: 5px
 
 .date-input-icon
-	position: relative
+  position: relative
 
-	&::after
-		content: "\f073"
-		@include centerer-y
-		right: 14px
-		font-family: 'Font Awesome\ 5 Free'
-		font-size: 18px
-		color: $cyan 
+  &::after
+    content: "\f073"
+    @include centerer-y
+    right: 14px
+    font-family: 'Font Awesome\ 5 Free'
+    font-size: 18px
+    color: $cyan
 
 .form-control
-	width: 100%
-	padding: 13px 0 13px 16px
-	border: 1px solid #d6dbe6
-	border-radius: 3px
-	font-size: 14px
+  width: 100%
+  padding: 13px 0 13px 16px
+  border: 1px solid #d6dbe6
+  border-radius: 3px
+  font-size: 14px
 
-	&:hover
-		border-color: #c0c5cF
+  &:hover
+    border-color: #c0c5cF
 
-	&.date-input
-		color: #82888f
+  &.date-input
+    color: #82888f
 
-	&.select
-		-webkit-appearance: none
+  &.select
+    -webkit-appearance: none
 
 .user-filters
-	display: flex
+  display: flex
 
 .user-filter-select
-	width: 195px
-	margin-left: 20px
+  width: 195px
+  margin-left: 20px
 
-	&:first-child
-		margin-left: 0
+  &:first-child
+    margin-left: 0
 
 .select-arrow-icon
-	position: relative
+  position: relative
 
-	&::after
-		content: "\f107"
-		@include centerer-y
-		right: 14px
-		font-family: 'Font Awesome\ 5 Free'
-		font-size: 18px
-		font-weight: 900
-		color: $cyan
+  &::after
+    content: "\f107"
+    @include centerer-y
+    right: 14px
+    font-family: 'Font Awesome\ 5 Free'
+    font-size: 18px
+    font-weight: 900
+    color: $cyan
 
 .btn-row
-	display: flex
-	justify-content: flex-end
-	margin-bottom: 9px
+  display: flex
+  justify-content: flex-end
+  margin-bottom: 9px
 
 .table-wrapper
-	margin-bottom: 50px	
+  margin-bottom: 50px
 
 .datetime-wrapper
-	margin-bottom: 10px
+  margin-bottom: 10px
 
 .date
-	font-size: 18px
-	font-weight: bold
-	margin-right: 15px
+  font-size: 18px
+  font-weight: bold
+  margin-right: 15px
 
 .time
-	vertical-align: top
-	color: #617083
+  vertical-align: top
+  color: #617083
 
 .table
-	width: 100%
-	border-collapse: collapse
-	border-spacing: 0
+  width: 100%
+  border-collapse: collapse
+  border-spacing: 0
 
-	> thead > tr
-		border-bottom: 1px solid #dce3e9
+  > thead > tr
+    border-bottom: 1px solid #dce3e9
 
-	> thead > tr > th
-		font-size: 14px
-		text-align: left
-		padding: 15px 0 21px 0
+  > thead > tr > th
+    font-size: 14px
+    text-align: left
+    padding: 15px 0 21px 0
 
-	> thead > tr > th > i
-		font-size: 16px
-		margin-left: 8px
-		vertical-align: middle
-	
-	> tbody > tr
-		border-bottom: 1px solid #dce3e9
-	
-	> tbody > tr > td
-		font-size: 14px
-		padding: 23px 0
+  > thead > tr > th > i
+    font-size: 16px
+    margin-left: 8px
+    vertical-align: middle
+
+  > tbody > tr
+    border-bottom: 1px solid #dce3e9
+
+  > tbody > tr > td
+    font-size: 14px
+    padding: 23px 0
 
 .project-cell-wrapper
-	display: flex
-	align-items: center
+  display: flex
+  align-items: center
 
 .project-logo
-	margin-right: 13px
+  margin-right: 13px
 
 .avatar-initial
-	width: 32px
-	height: 32px
-	border-radius: 50%
-	font-size: 14px
-	line-height: 1
-	text-align: center
-	font-weight: 700
-	color: #fff
-	padding-top: 8px
+  width: 32px
+  height: 32px
+  border-radius: 50%
+  font-size: 14px
+  line-height: 1
+  text-align: center
+  font-weight: 700
+  color: #fff
+  padding-top: 8px
 
 .project-title
-	font-weight: bold
+  font-weight: bold
 
 .project-desc
-	text-transform: uppercase
+  text-transform: uppercase
 
+@import "fonts"
+@import "libs"
 @import "media"
